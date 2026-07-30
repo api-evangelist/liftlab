@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: searched
+source: https://liftlab-analytics-inc.trust.site/
+url: https://liftlab-analytics-inc.trust.site/
+platform: trust.site
+certifications:
+- SOC 2
+- SOC 2 Type II
+- ISO 27001
+- ISO 27001:2013
+- GDPR
+- CCPA
+subprocessors:
+- name: AWS
+  purpose: IT infrastructure
+  region: United States
+- name: Office365
+  purpose: Identity and access management
+  region: United States
+control_domains:
+- product security
+- data security
+- network security
+- endpoint security
+- corporate security
+documents_listed: 39+
+document_examples:
+- acceptable usage policy
+- access control policy
+- asset management policy
+- human resources security policy
+vulnerability_disclosure: none-published
+security_contact: none-published
+evidence:
+- source: https://liftlab-analytics-inc.trust.site/
+  keywords: [soc 2, iso 27001, subprocessors, security policies]
+- source: https://liftlab.com/llms.txt
+  keywords: ['SOC 2 Type II and ISO 27001:2013 certified. GDPR and CCPA compliant.']

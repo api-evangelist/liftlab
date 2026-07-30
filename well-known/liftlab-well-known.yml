@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: searched
+source: https://liftlab.com/
+host: https://liftlab.com
+note: >-
+  LiftLab publishes no public API and exposes no /.well-known/ discovery
+  documents. Every probed path returned 404. A published /llms.txt IS present
+  and was captured verbatim at llms/liftlab-llms.txt. No WellKnown or
+  SecurityTxt pointer is wired into apis.yml because no document was found.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+related:
+- path: /llms.txt
+  status: 200
+  file: ../llms/liftlab-llms.txt
+- path: /robots.txt
+  status: 200
+  note: >-
+    Explicitly allows GPTBot, ClaudeBot and PerplexityBot, and allows /llms.txt.
+- path: /sitemap.xml
+  status: 200
+  note: Index of 8 child sitemaps (page, platforms, solutions, blog, success-stories, news, whitepaper, webinar).
+subdomains_probed:
+- host: docs.liftlab.com
+  status: no-dns
+- host: developer.liftlab.com
+  status: no-dns
+- host: api.liftlab.com
+  status: no-dns
+- host: app.liftlab.com
+  status: no-dns
+- host: support.liftlab.com
+  status: no-dns
+- host: status.liftlab.com
+  status: no-dns

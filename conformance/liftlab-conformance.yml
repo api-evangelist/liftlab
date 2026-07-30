@@ -1,0 +1,54 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://liftlab-analytics-inc.trust.site/ + https://liftlab.com/llms.txt +
+  https://liftlab.com/about/
+note: >-
+  LiftLab publishes no public API, so no API/interface standards (OAuth 2.0,
+  OIDC, RFC 9457, pagination, idempotency) can be asserted either way — those
+  entries are recorded as unknown with the reason. Only the organizational
+  compliance program is verifiable from public sources.
+standards:
+- id: soc2-type2
+  conforms: true
+  evidence: >-
+    Trust center (liftlab-analytics-inc.trust.site) and /llms.txt both state
+    "SOC 2 Type II" certified.
+- id: iso-27001
+  conforms: true
+  evidence: >-
+    Trust center and /llms.txt state "ISO 27001:2013 certified".
+- id: gdpr
+  conforms: true
+  evidence: /llms.txt and /about/ state "GDPR and CCPA compliant".
+- id: ccpa
+  conforms: true
+  evidence: /llms.txt and /about/ state "GDPR and CCPA compliant".
+- id: llms-txt
+  conforms: true
+  evidence: >-
+    https://liftlab.com/llms.txt returns 200 with a structured llms.txt document;
+    /robots.txt explicitly allows it and allows GPTBot, ClaudeBot, PerplexityBot.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt and /security.txt both return 404.
+- id: oauth2
+  conforms: false
+  evidence: >-
+    unknown — no public API, no OpenAPI, no /.well-known/oauth-authorization-server
+    (404) and no /.well-known/openid-configuration (404).
+- id: oidc
+  conforms: false
+  evidence: unknown — /.well-known/openid-configuration returns 404; no public auth surface.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: unknown — no public API or OpenAPI to inspect.
+- id: pci-dss
+  conforms: false
+  evidence: not claimed on the trust center or any public page.
+- id: hipaa
+  conforms: false
+  evidence: not claimed on the trust center or any public page.
+- id: fedramp
+  conforms: false
+  evidence: not claimed on the trust center or any public page.

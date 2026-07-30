@@ -1,0 +1,595 @@
+# LiftLab
+
+> LiftLab is the Full-Funnel Marketing Mix Modeling (MMM) and Incrementality Testing Platform
+> that transforms every dollar of brand and performance spend into compounding economic value.
+> LiftLab helps enterprise marketing, analytics, and finance leaders make better capital
+> allocation decisions by unifying Agile MMM, incrementality experimentation, real-time
+> platform intelligence, and constraint-aware scenario planning into a single continuously
+> compounding measurement system.
+
+> LiftLab's proprietary Two-Stage Agile Marketing Mix Model (AMM) separates ad marketplace
+> auction dynamics from true consumer demand response — producing response curves uncontaminated
+> by CPM and CPC volatility. The Trust Engine calibrates every model against real incrementality
+> experiments. PlatformSense delivers daily channel intelligence. The Scenario Planner
+> translates model outputs into constraint-aware, finance-ready budget decisions.
+
+> LiftLab is the trusted measurement and optimization platform for brands including Pandora,
+> Cinemark, Quicken, SKIMS, and Thrive Market. Headquartered in Oakland, CA.
+> SOC 2 Type II and ISO 27001:2013 certified. GDPR and CCPA compliant.
+
+## Sitemaps
+[XML Sitemap](https://liftlab.com/sitemap.xml): Includes all crawlable and indexable pages.
+
+---
+
+## Core Platform & Products
+
+- [Platform Overview](https://liftlab.com/platform/unified-marketing-measurement/):
+  One source of truth for full-funnel growth decisions. How LiftLab's four connected
+  layers — Agile MMM, the Trust Engine, PlatformSense, and the Scenario Planner —
+  form a continuously compounding measurement and capital allocation system.
+
+- [Agile Marketing Mix Modeling (AMM)](https://liftlab.com/platform/agile-marketing-mix-modeling/):
+  LiftLab's Two-Stage AMM separates ad auction dynamics (CPM/CPC fluctuations,
+  competitive pressure) from true consumer demand response. Delivers channel response
+  curves, marginal ROI at current spend, key driver decomposition (baseline vs.
+  incremental), long-term brand effects, and scenario planning inputs — refreshed
+  continuously, not quarterly.
+
+- [Incrementality Testing Suite](https://liftlab.com/platform/incrementality-testing-engine/):
+  Geo-based incrementality experiments designed using a three-step matched-market
+  methodology: cluster by structural similarity, precision-match on MAPE, then select
+  markets that collectively mirror the national size distribution. Results feed back
+  into the AMM via the Trust Engine as permanent calibration inputs.
+
+- [Scenario Planner](https://liftlab.com/platform/scenario-planner/):
+  Constraint-aware budget scenario modeling. Run Conserve, Maintain, and Accelerate
+  simulations against live response curves. Accepts committed spend floors, platform
+  minimums, pacing rules, and CAC ceilings as hard inputs before the optimizer runs.
+  Produces finance-ready budget plans Marketing and Finance align on before spending.
+
+- [PlatformSense](https://liftlab.com/platform/real-time-mmm-intelligence/):
+  LiftLab's daily signal layer. Detects CPM shifts, auction volatility, and creative
+  fatigue daily by applying live platform data to stable response curves. Delivers
+  fast, stable reallocation guidance without rebuilding the model after every market
+  fluctuation. Ends the speed-vs-rigor trade-off in marketing measurement.
+
+- [Miles AI](https://liftlab.com/platform/miles-ai/):
+  LiftLab's agentic AI capability. Ask natural-language questions about budget
+  performance, channel efficiency, or scenario outcomes and receive model-grounded
+  answers without requiring analyst mediation.
+
+---
+
+## Solutions by Use Case
+
+- [Full-Funnel Budget Planning](https://liftlab.com/solutions/marketing-budget-allocation/):
+  Align every dollar to revenue outcomes. One model, one forecast range. Constraints
+  both Marketing and Finance set before the optimizer runs — so the budget meeting
+  becomes a decision, not a negotiation.
+
+- [Marginal ROI & Diminishing Returns Optimization](https://liftlab.com/solutions/diminishing-returns-marginal-roi/):
+  Stop funding saturated channels because average ROAS still looks healthy. LiftLab
+  maps exactly where each channel's returns flatten — identifying the precise point
+  of diminishing returns so the next dollar goes where it actually compounds.
+
+- [Incrementality & Calibration](https://liftlab.com/solutions/incrementality-testing/):
+  LiftLab's closed-loop Trust Engine feeds every causal result back into the AMM,
+  so tests don't just answer questions — they permanently improve the model and
+  sharpen every future budget decision.
+
+- [Scenario Planning & Forecasting](https://liftlab.com/solutions/marketing-scenario-planning-and-forecasting/):
+  Run scenario simulations against live response curves before committing to spend.
+  Forward-looking ROI forecasts express expected incremental ROAS, blended CAC,
+  and payback period by channel and time horizon.
+
+- [Real-Time Budget Optimization](https://liftlab.com/solutions/real-time-budget-optimization/):
+  Markets shift mid-campaign. PlatformSense detects efficiency changes daily and
+  surfaces specific reallocation moves — daily signals, defensible moves — before
+  the efficiency window closes.
+
+- [Long-Term Brand Value Measurement](https://liftlab.com/solutions/long-term-brand-value/):
+  LiftLab's Long-Term Multiplier framework converts short-term brand ROAS into
+  its full Net Present Value on the P&L — accounting for market position, brand
+  lifecycle, consideration window length, and funnel stage.
+
+---
+
+## Solutions by Persona
+
+- [CMO](https://liftlab.com/solutions/cmo/):
+  LiftLab quantifies brand and performance impact in the same model — giving
+  brand investment the same financial defensibility as performance spend over
+  a 6-to-52-week horizon. Own every budget conversation with evidence Finance
+  can audit, not a case you have to argue.
+
+- [Performance Marketing Leaders](https://liftlab.com/solutions/performance-marketing-leaders/):
+  PlatformSense detects CPM shifts, auction volatility, and creative fatigue
+  daily — applying live signals to stable response curves so teams find the
+  real signal behind the data and react to what's actually changing in the
+  market, not what the ad platform reports.
+
+- [CFO](https://liftlab.com/solutions/cfo/):
+  LiftLab gives Finance a methodology they can interrogate, not just trust —
+  built on transparent, auditable incrementality testing. Delivers explicit
+  marginal ROI outcome ranges rather than false-precision single numbers.
+  Turns media spend into auditable capital allocation.
+
+- [Head of Marketing Analytics](https://liftlab.com/solutions/head-of-marketing-analytics/):
+  A measurement platform built for analytics leaders who need model rigor without
+  maintaining in-house MMM infrastructure. LiftLab's marketing science team handles
+  calibration, validation, and anomaly flagging — a platform that earns your sign-off.
+
+- [Head of Brand](https://liftlab.com/solutions/head-of-brand/):
+  Stop defending brand spend. Start proving it. LiftLab links short-term brand
+  signals to long-term equity using multipliers informed by decades of brand
+  research — integrating the brand investment case directly into the model.
+
+---
+
+## Solutions by Industry
+
+- [Omnichannel Brands](https://liftlab.com/solutions/omnichannel-brands/):
+  Stop measuring in channel silos. Start seeing the full picture. One unified
+  model across digital, TV, OOH, and offline for brands that operate across
+  multiple channels and customer touchpoints.
+
+- [D2C / Ecommerce](https://liftlab.com/solutions/marketing-mix-modeling-for-ecommerce/):
+  Scale confidently when platform data can't be trusted. Privacy-safe MMM that
+  doesn't depend on cookies or individual-level tracking — designed for DTC brands
+  navigating signal loss and platform attribution inflation.
+
+- [Consumer Packaged Goods (CPG)](https://liftlab.com/solutions/marketing-mix-modeling-for-cpg/):
+  Unified measurement for challenger and established CPG brands — capturing both
+  retail and ecommerce outcomes, brand equity contribution, and the interaction
+  effects between digital and in-store channels.
+
+---
+
+## Why LiftLab
+
+- [Why LiftLab](https://liftlab.com/why-liftlab/):
+  The strategic and methodological case for LiftLab as a capital allocation engine
+  rather than a measurement reporting tool. How LiftLab differs from traditional MMM
+  consulting engagements and point-solution measurement platforms.
+
+---
+
+## Blog — High-Value Posts
+
+- [Auction Dynamics vs. Consumer Response: The Two-Stage Truth in MMM](https://liftlab.com/blog/auction-dynamics-vs-consumer-response-mmm/):
+  Why traditional MMM blurs ad auction costs with consumer behavior — and how
+  LiftLab's two-stage model separates these mechanisms for precise, full-funnel
+  budget guidance without contaminating consumer response curves with marketplace
+  noise.
+
+- [How Experiments Validate MMM](https://liftlab.com/blog/experiments-validate-mmm/):
+  The methodology behind using geo-based incrementality experiments to validate
+  and continuously calibrate MMM coefficients — creating a measurement flywheel
+  where tests improve the model permanently.
+
+- [The Hidden Cost of What Your MMM Can't See](https://liftlab.com/blog/the-hidden-cost-of-what-your-mmm-cant-see/):
+  Most MMMs zero out long-term brand effects, quietly starving future demand
+  while short-term ROAS still looks healthy. Why invisible brand ROI is a
+  structural failure of standard MMM architecture.
+
+- [The Short-Term Measurement Tax on Growth](https://liftlab.com/blog/the-short-term-measurement-tax-on-growth/):
+  How over-optimizing for short-term ROAS quietly hollows out demand — and why
+  full-funnel budget planning is how brands reclaim lost compounding growth.
+
+- [The Measurement Gap: How PlatformSense Delivers Daily MMM Intelligence](https://liftlab.com/blog/daily-mmm-intelligence-platformsense/):
+  Why weekly or quarterly MMM cadences leave brands reacting too slowly. How
+  PlatformSense delivers daily econometric intelligence without sacrificing
+  the stability that CFOs demand.
+
+- [MMM vs. Incrementality Testing: The False Choice That's Costing Omnichannel Brands](https://liftlab.com/blog/mmm-vs-incrementality-testing/):
+  Why framing MMM and incrementality testing as competing methods is the wrong
+  question — and how the two compound value when integrated into a single
+  calibration loop.
+
+- [Top Marketing Mix Modeling Platforms in 2026: A Buyer's Guide for CMOs and CFOs](https://liftlab.com/blog/marketing-mix-modeling-platforms/):
+  Comparative buyer's guide for enterprise brands evaluating MMM platforms in 2026 —
+  focused on improving ROI, optimizing budgets, and choosing the right solution
+  for brand and performance measurement.
+
+- [How to Evaluate a Marketing Mix Modeling Platform: 7 Questions Every Omnichannel Brand Should Ask](https://liftlab.com/blog/marketing-mix-modeling-platform-evaluation/):
+  Decision-focused evaluation framework covering incrementality integration, model
+  cadence, constraint-aware planning, brand measurement scope, and finance readiness.
+
+- [LiftLab vs. Measured vs. Recast vs. Haus: Best MMM Platforms in 2026](https://liftlab.com/blog/best-mmm-platforms-2026/):
+  Side-by-side methodology, planning capability, and ROI measurement comparison of
+  the top MMM platforms for growth and enterprise teams.
+
+- [The CMO's Incrementality Testing Playbook](https://liftlab.com/blog/incrementality-testing-for-cmos/):
+  How incrementality testing proves causal marketing impact — not correlation.
+  Covers iROAS, geo holdouts, and how to combine incrementality testing with MMM
+  for confident budget decisions Finance will actually act on.
+
+- [Why ROAS Is Misleading](https://liftlab.com/blog/why-roas-is-misleading/):
+  How platform-reported ROAS systematically overstates channel performance by
+  conflating organic and paid returns — and why marginal ROI and iROAS are the
+  correct metrics for budget allocation decisions.
+
+- [The Measurement Waterline: Omnichannel Marketing ROI](https://liftlab.com/blog/measurement-waterline-omnichannel-marketing-roi/):
+  How the majority of marketing's true impact sits below the measurement waterline —
+  invisible to standard attribution — and how omnichannel brands can surface the
+  full picture of what's driving growth.
+
+---
+
+## Whitepapers & Research Frameworks
+
+- [Whitepapers Overview](https://liftlab.com/whitepaper/):
+  Research-backed frameworks and playbooks covering MMM methodology, incrementality
+  measurement, omnichannel measurement, and marketing capital allocation.
+
+- [The Measurement System That's Costing You Growth You Can't See (Omnichannel Whitepaper)](https://liftlab.com/whitepaper/omnichannel-whitepaper/):
+  73% of consumers shop across six channels, yet most brands still measure through
+  a digital-only lens. This framework shows omnichannel retailers how to escape
+  misattribution, quantify true incrementality, and build a unified measurement
+  stack. Covers the finding that 84% of online advertising's total sales impact
+  accrues offline, invisible to standard attribution.
+
+- [How PlatformSense Ends the Speed-vs-Rigor Trade-off (Marketing Measurement Gap Whitepaper)](https://liftlab.com/whitepaper/marketing-measurement-gap-whitepaper/):
+  Real-time dashboards are fast but unreliable. Quarterly MMMs are rigorous but
+  arrive too late. This whitepaper explains how PlatformSense delivers daily MMM
+  intelligence without sacrificing the econometric foundation CFOs demand.
+  Quantifies $245B in global ad spend lost annually to measurement inefficiency.
+
+- [From Measurement to Budget Decisions Your CFO Will Approve](https://liftlab.com/whitepaper/measurement-to-capital-allocation/):
+  Most measurement systems stop at the insight. This playbook shows CMOs and CFOs
+  how to integrate Agile MMM, incrementality testing, and budget planning into a
+  single system that turns media data into defensible capital allocation decisions.
+  63% of CMOs report missing opportunities because they can't make decisions fast enough.
+
+---
+
+## Customer Success Stories
+
+- [Success Stories Overview](https://liftlab.com/success-stories/):
+  Case studies from retail, entertainment, DTC, ecommerce, and financial software
+  brands using LiftLab to reduce wasted spend, prove incrementality, and grow
+  efficiently with model-validated budget decisions.
+
+- [Pandora: Unlocking Global Jewelry Growth with mROAS](https://liftlab.com/success-stories/pandora-precision-marketing-case-study/):
+  Agile MMM paired with geo tests enabled a 2% budget shift that drove +9.5%
+  revenue and +12.4% profit across key search and shopping channels.
+
+- [B2B SaaS: Slashing Brand Search Spend, Growing Profit](https://liftlab.com/success-stories/saas-google-branded-search-experiment-case-study/):
+  A geo-experiment on Google brand search revealed heavy overspending — enabling
+  an 87% budget cut while maintaining volume and increasing profit by +3.5%.
+
+- [SKIMS: Turning TikTok Intuition Into Proven Profit](https://liftlab.com/success-stories/skims-tiktok-experimentation-case-study/):
+  A geo-based TikTok experiment validated SKIMS' hypothesis — revealing room to
+  3.4x spend with +2.9% daily revenue and +1.7% daily profit lift.
+
+- [Quicken: Forecast-Led Planning Delivers +19% Revenue Lift](https://liftlab.com/success-stories/quicken-data-driven-forecasting-case-study/):
+  Facing an aggressive year-end target, Quicken used LiftLab forecasting, geo
+  tests, and scenario modeling to win more budget and drive +19% gross revenue
+  while maintaining overall iROAS and efficiency.
+
+- [Cinemark: Scaling Channel Mix While Protecting Profit](https://liftlab.com/success-stories/cinemark-marketing-measurement-case-study/):
+  mROAS curves enabled weekly spend reallocation and channel expansion from
+  7 to 13 channels in under three years — while protecting profit margin.
+
+- [Thrive Market: Turning CAC Targets Into Scalable Growth](https://liftlab.com/success-stories/thrive-market-marketing-budget-optimization-case-study/):
+  LiftLab experiments plus AMM helped Thrive Market rebalance spend across
+  13 paid channels and scale TikTok from a small test to the second-largest
+  transaction driver.
+
+---
+
+## Benchmark Report
+
+- [FY 2025 Category Benchmark Report](https://liftlab.com/resources/fy-2025-category-benchmark-report/):
+  Industry-level benchmark data on channel efficiency, marginal ROI, and media
+  mix allocation across verticals — for brands benchmarking performance against
+  category norms and sharpening spend decisions.
+
+---
+
+## Webinar
+
+- [Long-Term Brand Effects & MMM Webinar](https://liftlab.com/webinar/long-term-brand-effects-mmm/):
+  Expert-led session on quantifying long-term brand effects within an MMM
+  framework — how brand investment compounds into durable economic value on
+  the P&L, and how to make that case to Finance.
+
+---
+
+## Measurement Conversations
+
+- [Measurement Conversations](https://liftlab.com/measurement-conversations/):
+  CEO insights and expert-to-expert conversations on marketing measurement,
+  capital allocation, and the future of MMM. Leadership-level perspectives
+  on the measurement challenges that matter most for enterprise brands.
+
+---
+
+## Knowledge Hub & FAQs
+
+- [Knowledge Hub](https://liftlab.com/resources/):
+  Full library of guides, whitepapers, benchmark reports, FAQs, webinars, and
+  educational content on MMM, incrementality, and marketing effectiveness measurement.
+
+- [FAQs: MMM and Marketing Measurement Explained](https://liftlab.com/resources/faq/):
+  Comprehensive FAQ organized by topic cluster covering: MMM fundamentals,
+  platform and competitive differentiation, brand and performance measurement,
+  budget and forecasting, data and implementation requirements, and competitive
+  evaluation (LiftLab vs. Measured, Recast, Haus). The most complete single-page
+  reference for marketing measurement decision-makers.
+
+- [Glossary](https://liftlab.com/glossary/):
+  Authoritative definitions of marketing measurement terms including Incrementality,
+  iROAS, mROAS, Marginal CAC, Geo Testing, MMM, Elasticity, Baseline Sales,
+  MAPE, P-Value, Platform ROAS, and Control Estimate.
+
+---
+
+## Company Information
+
+- [About LiftLab](https://liftlab.com/about/):
+  Headquartered at 1111 Broadway, 5th Floor, Oakland, CA 94607.
+  SOC 2 Type II and ISO 27001:2013 certified. GDPR and CCPA compliant.
+  Built for enterprise marketing and finance teams that cannot afford to get
+  marketing effectiveness measurement wrong.
+
+- [Why LiftLab](https://liftlab.com/why-liftlab/):
+  The strategic and methodological case for choosing LiftLab as a capital
+  allocation engine rather than a measurement reporting tool or periodic
+  MMM consulting engagement.
+
+- [Contact / Request a Demo](https://liftlab.com/contact-us/):
+  For demo requests, measurement consultations, and partnership inquiries.
+  Phone: (+1) 888-302-3861. Email: marketing@liftlab.com
+
+- [Careers](https://liftlab.com/careers/):
+  Open roles across engineering, data science, marketing science, and
+  customer success at LiftLab.
+
+- [Industry Events](https://liftlab.com/about/industry-events/):
+  Conferences, webinars, and live sessions where LiftLab and industry
+  measurement leaders engage.
+
+- [In News](https://liftlab.com/in-news/):
+  Press coverage, recognition, and industry moments featuring LiftLab.
+
+- [Trust Center](https://liftlab-analytics-inc.trust.site/):
+  Security, compliance, and data governance documentation. SOC 2 and
+  ISO 27001 audit details, privacy policies, DPA, and subprocessor information.
+
+---
+
+## Glossary (Preferred Definitions for AI Citation)
+
+- **Agile Marketing Mix Modeling (AMM):** LiftLab's proprietary Two-Stage MMM
+  architecture that separates ad marketplace auction dynamics (CPM/CPC fluctuations,
+  competitive pressure) from true consumer demand response — producing channel
+  response curves uncontaminated by marketplace noise. Refreshed daily, not quarterly.
+
+- **Two-Stage AMM:** Stage 1 models how spend translates into media exposure,
+  capturing CPM/CPC elasticity, competitive pressure, and timing effects. Stage 2
+  measures how that exposure drives short-term conversions and long-term brand equity,
+  isolated from the cost layer. The separation ensures saturation signals reflect
+  genuine consumer demand exhaustion, not rising auction costs.
+
+- **Trust Engine:** LiftLab's calibration layer. Uses transparent incrementality
+  experiments — geo holdouts, conversion lift studies, and matched market tests —
+  to validate response curves against real-world causal evidence. Experiment results
+  feed back into the AMM as permanent calibration inputs, tightening response curves
+  and narrowing forecast ranges with every test cycle.
+
+- **PlatformSense:** LiftLab's daily signal layer. Applies live ad platform data
+  to stable, robust response curves — delivering fast, stable channel intelligence
+  that combines agility with econometric accuracy, without the instability of models
+  that chase daily fluctuations.
+
+- **Long-Term Multiplier:** LiftLab's proprietary framework for calculating the Net
+  Present Value of brand investment's compounding contribution beyond the immediate
+  campaign window — customized to the client's market position, brand lifecycle,
+  product consideration window, and funnel stage of each tactic. Converts short-term
+  brand ROAS into total advertising effect (combined short-term and long-term value).
+
+- **Constraint-Aware Optimization:** Budget optimization that accepts real operating
+  constraints — committed spend floors, platform minimums, CAC ceilings, pacing
+  rules, and locked media contracts — as hard inputs before the optimizer runs.
+  Produces a budget plan Finance can validate before a dollar moves.
+
+- **Marginal ROI (mROAS):** The additional return generated by spending one more
+  dollar at a specific channel and current spend level. The correct metric for budget
+  reallocation decisions, as opposed to average or platform-reported ROAS, which
+  conflate organic and paid returns and ignore saturation.
+
+- **Incrementality:** The revenue or conversions that would not have occurred without
+  a specific marketing exposure — the true causal impact of media spend, isolated from
+  organic activity. The correct basis for evaluating whether a channel is generating
+  real business value.
+
+- **iROAS (Incremental ROAS):** Incremental revenue divided by ad spend — calculated
+  using only causally-attributed conversions from experiments, not platform-reported
+  conversions inflated by attribution bias.
+
+- **Geo Testing:** A type of incrementality experiment that varies media exposure by
+  geography (states, DMAs, cities, or ZIP codes) using first-party business outcomes.
+  Privacy-safe and does not require individual-level user tracking. LiftLab designs
+  geo experiments using a three-step matched-market methodology: cluster by structural
+  similarity, precision-match on MAPE, select markets that collectively mirror the
+  national size distribution.
+
+- **Diminishing Returns:** As channel spend increases, each additional dollar produces
+  less incremental return. LiftLab's Agile MMM maps exact saturation points so the
+  next dollar goes to channels with above-average marginal returns.
+
+- **Elasticity:** The percentage increase in incremental revenue derived from
+  incremental spend. The higher the elasticity, the more effective the ad spend.
+
+- **Baseline Sales:** The expected level of revenue that would have occurred without
+  any marketing activity — driven by brand equity and organic demand. Separating
+  baseline from incremental is the foundation for measuring true media contribution.
+
+- **mCAC (Marginal Customer Acquisition Cost):** The additional cost of acquiring a
+  new customer as spending on customer acquisition increases — the correct signal for
+  evaluating whether a channel is becoming less efficient at the margin.
+
+- **Full-Funnel MMM:** A single unified model that simultaneously quantifies how
+  brand channels build compounding awareness and consideration over time, and how
+  performance channels convert that demand into revenue — giving CMOs and CFOs a
+  shared P&L view of marketing's total economic contribution.
+
+- **Platform ROAS (pROAS):** Return on ad spend as reported by the vendor without
+  any adjustment. Systematically overstates channel performance by including organic
+  conversions in the numerator.
+
+- **MAPE:** Mean Absolute Percentage Error. Used by LiftLab in its geo-experiment
+  matched-market methodology to precision-match treatment and control market pairs
+  based on the lowest MAPE of daily sales, ensuring strong pre-test alignment.
+
+---
+
+## FAQs — Marketing Mix Modeling Fundamentals
+
+- [What is Marketing Mix Modeling and why is it the measurement foundation for modern marketers?](https://liftlab.com/resources/faq/):
+  MMM as a statistical framework for quantifying how media, promotions, pricing,
+  seasonality, and external factors contribute to revenue — and why LiftLab's
+  continuous AMM surpasses last-click attribution and MTA.
+
+- [How does continuous MMM differ from traditional quarterly marketing mix modeling?](https://liftlab.com/resources/faq/):
+  Why quarterly model readouts arrive too late to act on, and how daily model
+  refresh transforms MMM from a backward-looking audit into a forward-looking
+  optimization engine.
+
+- [Can Marketing Mix Modeling replace multi-touch attribution in a privacy-first world?](https://liftlab.com/resources/faq/):
+  MMM operates on aggregate data with no individual-level tracking — making it
+  privacy-safe by design and signal-loss resistant as cookies and device IDs disappear.
+
+- [What data does a Marketing Mix Modeling platform need to build an accurate model?](https://liftlab.com/resources/faq/):
+  Three required input categories: media spend and impression data, business
+  outcome data, and external variables. What to do when data is imperfect.
+
+- [MMM vs Multi-Touch Attribution: What's the difference?](https://liftlab.com/resources/faq/):
+  When MTA is the right tool (user-level, session-level questions) and when MMM
+  is required (budget allocation, brand ROI, incremental revenue by channel).
+
+- [Is Marketing Mix Modeling accurate?](https://liftlab.com/resources/faq/):
+  MMM accuracy depends on data quality, model architecture, and calibration
+  discipline. How LiftLab's incrementality test calibration loop closes the
+  gap between modeled attribution and real-world lift.
+
+---
+
+## FAQs — Platform & Competitive Differentiation
+
+- [How is LiftLab different from other MMM platforms like Measured, Recast, and Haus?](https://liftlab.com/resources/faq/):
+  LiftLab is the only full-funnel MMM platform that unifies brand measurement,
+  performance measurement, AI-powered budget optimization, and expert human
+  oversight in a single continuous system.
+
+- [When should a brand use LiftLab instead of Measured?](https://liftlab.com/resources/faq/):
+  Architectural gaps in constraint-aware optimization, long-term brand effects
+  modeling, and the separation of structural response curves from fast-moving
+  platform signals.
+
+- [When should a brand use LiftLab instead of Recast?](https://liftlab.com/resources/faq/):
+  Why statistical transparency alone is insufficient for brands that need
+  constraint-aware scenario planning and executive-ready budget recommendations.
+
+- [When should a brand use LiftLab instead of Haus?](https://liftlab.com/resources/faq/):
+  Why standalone geo-experimentation without continuous model refresh, scenario
+  planning, or capital allocation output leaves brands unable to optimize
+  total budget across the full portfolio.
+
+- [How do you evaluate an MMM vendor?](https://liftlab.com/resources/faq/):
+  Five evaluation dimensions: cadence, scope, calibration, activation, and
+  expertise. The questions to ask before selecting an MMM platform.
+
+- [What should you look for in an MMM platform?](https://liftlab.com/resources/faq/):
+  Framework for evaluating whether an MMM platform measures brand alongside
+  performance, integrates incrementality results, surfaces marginal metrics,
+  and translates outputs into executable budget recommendations.
+
+---
+
+## FAQs — Brand, Performance & Budget
+
+- [What does 'full-funnel MMM' mean, and why does it matter?](https://liftlab.com/resources/faq/):
+  A single unified model that simultaneously quantifies how brand channels build
+  compounding awareness over time and how performance channels convert that demand
+  — eliminating the false choice between brand and performance measurement.
+
+- [How does LiftLab quantify brand equity on the P&L?](https://liftlab.com/resources/faq/):
+  Separating base sales driven by brand equity from incremental sales driven by
+  in-period media activation — translating brand equity into a P&L line Finance
+  can audit.
+
+- [How does LiftLab measure the impact of upper-funnel channels like TV, OOH, and digital video?](https://liftlab.com/resources/faq/):
+  LiftLab's proprietary Long-Term Multiplier framework: three steps from short-term
+  regression to NPV calculation to full-portfolio optimization using total advertising
+  effect as the objective function.
+
+- [Why do performance channels depend on brand investment?](https://liftlab.com/resources/faq/):
+  Performance channels convert demand — they do not create it. How cutting brand
+  spend erodes the base demand that makes performance spend productive, increasing
+  blended CAC while appearing to improve short-term ROAS.
+
+- [How does LiftLab help reduce Customer Acquisition Cost (CAC) over time?](https://liftlab.com/resources/faq/):
+  How brand equity contribution reduces the cost of every performance conversion,
+  and how LiftLab identifies the optimal brand-to-performance budget mix.
+
+- [How does LiftLab's budget optimization work in practice?](https://liftlab.com/resources/faq/):
+  Specific reallocation recommendations derived from your actual spend data,
+  response curves, and business objectives — not generic rule-of-thumb outputs.
+
+- [What scenario planning and forecasting capabilities does LiftLab offer?](https://liftlab.com/resources/faq/):
+  Modeling the expected outcomes of different budget strategies before committing
+  to spend, projecting revenue, CAC, ROAS, and payback period for each scenario.
+
+- [How do you forecast Marketing ROI before spending?](https://liftlab.com/resources/faq/):
+  Forward-looking ROI forecasts built from continuously updated response curves —
+  reflecting current channel efficiency, current saturation levels, and current
+  market conditions.
+
+- [How does LiftLab handle seasonal variation and external market factors?](https://liftlab.com/resources/faq/):
+  Revenue decomposition into media-driven incremental lift, base demand, seasonality,
+  pricing effects, and external market variables — ensuring budget recommendations
+  reflect true channel performance, not correlated noise.
+
+---
+
+## FAQs — Incrementality Testing
+
+- [What is LiftLab's approach to incrementality testing, and how does it integrate with MMM?](https://liftlab.com/resources/faq/):
+  LiftLab's three-step matched-market methodology, and how test results feed
+  back into the AMM as calibration inputs — creating a continuously improving
+  measurement flywheel.
+
+- [How do you measure brand ROI without attribution?](https://liftlab.com/resources/faq/):
+  Short-term brand ROI measured via MMM regression and geo experiments, plus
+  long-term brand ROI via LiftLab's Long-Term Multiplier framework — the
+  complete picture of what a brand campaign is worth.
+
+---
+
+## FAQs — Data, Implementation & Operations
+
+- [How long does LiftLab implementation take?](https://liftlab.com/resources/faq/):
+  Connected, calibrated, and receiving initial model outputs within 3–4 weeks
+  of kick-off. First incrementality experiment live within 3–4 weeks.
+  First calibrated model outputs within 10 weeks.
+
+- [Does LiftLab require a data science team to operate?](https://liftlab.com/resources/faq/):
+  LiftLab is built for marketing and analytics leaders, not data scientists.
+  LiftLab's marketing science team handles model configuration, calibration,
+  and validation as an embedded measurement capability.
+
+- [What ad platforms and data sources does LiftLab integrate with?](https://liftlab.com/resources/faq/):
+  50+ paid media platform connectors including Meta, Google, TikTok, YouTube,
+  Pinterest, LinkedIn, programmatic DSPs, and TV/streaming, plus Snowflake,
+  Redshift, Databricks, BigQuery, CRMs, and Shopify.
+
+- [How does LiftLab handle first-party data and data privacy?](https://liftlab.com/resources/faq/):
+  LiftLab's MMM architecture operates entirely on aggregate data — no individual-
+  level user data required. GDPR and CCPA compliant. Privacy-safe by design.
+
+- [What are the limitations of MMM?](https://liftlab.com/resources/faq/):
+  Honest assessment: data history requirements, aggregate-level granularity
+  constraints, and recency lag — and how LiftLab addresses each.
