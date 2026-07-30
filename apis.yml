@@ -1,24 +1,91 @@
 aid: liftlab
 name: LiftLab
-description: 'LiftLab is a company surfaced as a portfolio company of cowboy-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  LiftLab (LiftLab Analytics, Inc.) is a marketing measurement and capital
+  allocation platform for enterprise marketing, analytics, and finance leaders.
+  Its Two-Stage Agile Marketing Mix Model (AMM) separates ad marketplace auction
+  dynamics — CPM/CPC volatility and competitive pressure — from true consumer
+  demand response, producing channel response curves and marginal ROI (mROAS)
+  that are not contaminated by marketplace noise. A geo-based Incrementality
+  Testing Suite feeds causal results back into the model through the Trust
+  Engine as permanent calibration inputs, PlatformSense applies live ad platform
+  data to those stable curves for daily channel intelligence, the Scenario
+  Planner turns model output into constraint-aware, finance-ready budget plans,
+  and Miles AI answers natural-language questions grounded in the model. LiftLab
+  serves D2C/ecommerce, CPG, and omnichannel retail brands including Pandora,
+  Cinemark, Quicken, SKIMS, and Thrive Market. Headquartered in Oakland, CA;
+  SOC 2 Type II and ISO 27001:2013 certified, GDPR and CCPA compliant. LiftLab
+  publishes no public developer API or API documentation as of this profile.
 url: https://raw.githubusercontent.com/api-evangelist/liftlab/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://liftlab.com/assets/logo.svg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - cowboy-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: portfolio-lead-enriched-no-public-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Enterprise
+- Marketing
+- Marketing Measurement
+- Marketing Mix Modeling
+- Incrementality
+- Analytics
+- Martech
+- Attribution
+- Budget Optimization
+- Data Science
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/liftlab-domain-security.yml
+- type: Website
+  url: https://liftlab.com/
+- type: Documentation
+  url: https://liftlab.com/resources/
+- type: GettingStarted
+  url: https://liftlab.com/platform/unified-marketing-measurement/
+- type: Support
+  url: https://liftlab.com/contact-us/
+- type: Blog
+  url: https://liftlab.com/blog/
+- type: SignUp
+  url: https://liftlab.com/request-a-demo/
+- type: TermsOfService
+  url: https://liftlab.com/terms-of-service/
+- type: PrivacyPolicy
+  url: https://liftlab.com/privacy-policy/
+- type: LLMsTxt
+  url: llms/liftlab-llms.txt
+- type: Conformance
+  url: conformance/liftlab-conformance.yml
+- type: Compliance
+  url: https://liftlab-analytics-inc.trust.site/
+- type: TrustCenter
+  url: security/liftlab-trust-center.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
