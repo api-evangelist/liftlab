@@ -15,7 +15,13 @@ description: >-
   serves D2C/ecommerce, CPG, and omnichannel retail brands including Pandora,
   Cinemark, Quicken, SKIMS, and Thrive Market. Headquartered in Oakland, CA;
   SOC 2 Type II and ISO 27001:2013 certified, GDPR and CCPA compliant. LiftLab
-  publishes no public developer API or API documentation as of this profile.
+  publishes no developer portal, no API documentation and no OpenAPI, but it
+  does operate one undocumented machine surface: an OAuth-protected Model
+  Context Protocol endpoint at https://connect.liftlab.com/server/api/mcp,
+  advertised through RFC 8414 and RFC 9728 discovery documents on its own
+  hostname and scoped for a Claude connector. That host is a white-labeled
+  TapClicks deployment, so the agent surface is served by LiftLab but supplied
+  by a vendor.
 url: https://raw.githubusercontent.com/api-evangelist/liftlab/refs/heads/main/apis.yml
 accessModel:
   pricing: unknown
@@ -34,10 +40,10 @@ x-source: vc-portfolio
 x-backed-by:
 - cowboy-ventures
 x-tier: profiled
-x-tier-reason: portfolio-lead-enriched-no-public-api
+x-tier-reason: undocumented-oauth-mcp-surface-no-developer-program
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-13'
 tags:
 - Company
 - Enterprise
@@ -51,7 +57,38 @@ tags:
 - Budget Optimization
 - Data Science
 - SaaS
-apis: []
+apis:
+- aid: liftlab-connect-mcp
+  name: LiftLab Connect MCP Server
+  description: >-
+    An OAuth-protected Model Context Protocol endpoint served from LiftLab's own
+    hostname connect.liftlab.com, discovered by certificate-transparency
+    enumeration rather than from documentation. An anonymous tools/list returns
+    401 with a correct RFC 9728 Bearer challenge, so the endpoint is live and the
+    tool list is auth-gated; no tools are recorded because none could be read
+    without a customer token, and none were invented. The single advertised OAuth
+    scope is "claudeai". The host is a white-labeled TapClicks portal (CNAME to
+    liftlabtrial.tapclicks.com), so LiftLab serves this surface under its own
+    domain and OAuth issuer while the underlying platform is vendor-supplied.
+    LiftLab publishes no documentation for it anywhere.
+  humanURL: https://connect.liftlab.com/
+  baseURL: https://connect.liftlab.com/server/api/mcp
+  tags:
+  - MCP
+  - Agents
+  - Marketing Measurement
+  - Analytics
+  properties:
+  - type: MCPServer
+    url: mcp/liftlab-mcp.yml
+  - type: Authentication
+    url: authentication/liftlab-authentication.yml
+  - type: OAuthScopes
+    url: scopes/liftlab-scopes.yml
+  - type: RateLimits
+    url: rate-limits/liftlab-rate-limits.yml
+  - type: WellKnown
+    url: well-known/liftlab-well-known.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -84,8 +121,25 @@ common:
   url: https://liftlab-analytics-inc.trust.site/
 - type: TrustCenter
   url: security/liftlab-trust-center.yml
+- type: MCPServer
+  url: mcp/liftlab-mcp.yml
+- type: Authentication
+  url: authentication/liftlab-authentication.yml
+- type: OAuthScopes
+  url: scopes/liftlab-scopes.yml
+- type: WellKnown
+  url: well-known/liftlab-well-known.yml
+- type: RateLimits
+  url: rate-limits/liftlab-rate-limits.yml
+- type: Plans
+  url: plans/liftlab-plans-pricing.yml
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-13'
+  status: enriched
+  artifacts_added: 7
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  note: >-
+    Certificate-transparency enumeration of *.liftlab.com surfaced
+    connect.liftlab.com, overturning the prior round's "no API surface" finding:
+    a live OAuth-protected MCP endpoint with RFC 8414 + RFC 9728 discovery
+    documents. Tool list is auth-gated and was not enumerated.
