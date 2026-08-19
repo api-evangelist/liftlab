@@ -1,0 +1,12 @@
+{
+    "resource": "https://connect.liftlab.com/server/api/mcp",
+    "authorization_servers": [
+        "https://connect.liftlab.com"
+    ],
+    "bearer_methods_supported": [
+        "header"
+    ],
+    "scopes_supported": [
+        "claudeai"
+    ]
+}

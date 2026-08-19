@@ -1,0 +1,37 @@
+generated: '2026-08-13'
+method: probed
+source: https://connect.liftlab.com/.well-known/oauth-authorization-server
+note: >-
+  Read verbatim from the scopes_supported array of LiftLab's RFC 8414
+  authorization-server metadata, corroborated by the identical scopes_supported
+  in the RFC 9728 protected-resource document. LiftLab publishes no scopes or
+  permissions reference page — there is no developer portal — so no description
+  could be searched to enrich this. The single scope string is recorded as
+  published; nothing is inferred about what it grants.
+docs: null
+docs_note: >-
+  No public scopes/permissions documentation exists. Probed liftlab.com
+  /developers/ (404), /api/ (404) and /docs (404) on 2026-08-13.
+
+authorization_server: https://connect.liftlab.com
+protected_resource: https://connect.liftlab.com/server/api/mcp
+
+scope_count: 1
+scopes:
+- scope: claudeai
+  description: >-
+    The only scope advertised by the authorization server. Named for the Claude
+    connector this MCP server is deployed for. LiftLab publishes no definition of
+    what the scope grants, so none is asserted here.
+  source: scopes_supported
+  applies_to: https://connect.liftlab.com/server/api/mcp
+
+x-evidence:
+- url: https://connect.liftlab.com/.well-known/oauth-authorization-server
+  http_status: 200
+  fetched: '2026-08-13'
+  extract: '"scopes_supported": ["claudeai"]'
+- url: https://connect.liftlab.com/.well-known/oauth-protected-resource
+  http_status: 200
+  fetched: '2026-08-13'
+  extract: '"scopes_supported": ["claudeai"]'

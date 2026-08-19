@@ -1,13 +1,21 @@
-generated: '2026-07-19'
+generated: '2026-08-13'
 method: searched
 source: >-
   https://liftlab-analytics-inc.trust.site/ + https://liftlab.com/llms.txt +
-  https://liftlab.com/about/
+  https://liftlab.com/about/ +
+  https://connect.liftlab.com/.well-known/oauth-authorization-server +
+  https://connect.liftlab.com/.well-known/oauth-protected-resource
 note: >-
-  LiftLab publishes no public API, so no API/interface standards (OAuth 2.0,
-  OIDC, RFC 9457, pagination, idempotency) can be asserted either way — those
-  entries are recorded as unknown with the reason. Only the organizational
-  compliance program is verifiable from public sources.
+  Revised 2026-08-13. The 2026-07-19 round recorded every interface standard as
+  unknown on the grounds that LiftLab publishes no public API. The organizational
+  compliance findings stand unchanged, but the interface findings did not: a
+  certificate-transparency sweep of *.liftlab.com surfaced connect.liftlab.com,
+  which serves RFC 8414 and RFC 9728 discovery documents protecting an MCP
+  endpoint. OAuth 2.0, PKCE and the two metadata RFCs are therefore now asserted
+  from probed machine documents rather than left unknown. Standards that still
+  cannot be observed (RFC 9457, pagination, idempotency) remain unknown because
+  the API behind the OAuth wall is not reachable anonymously — LiftLab still
+  publishes no OpenAPI and no developer documentation.
 standards:
 - id: soc2-type2
   conforms: true
@@ -31,18 +39,56 @@ standards:
     /robots.txt explicitly allows it and allows GPTBot, ClaudeBot, PerplexityBot.
 - id: rfc9116-security-txt
   conforms: false
-  evidence: /.well-known/security.txt and /security.txt both return 404.
-- id: oauth2
-  conforms: false
   evidence: >-
-    unknown — no public API, no OpenAPI, no /.well-known/oauth-authorization-server
-    (404) and no /.well-known/openid-configuration (404).
+    /.well-known/security.txt and /security.txt return 404 on liftlab.com, 404 on
+    connect.liftlab.com, and 403 on backend.liftlab.com. No security.txt is served
+    on any LiftLab host.
+- id: oauth2
+  conforms: true
+  evidence: >-
+    https://connect.liftlab.com/.well-known/oauth-authorization-server returns 200
+    with OAuth 2.0 authorization-server metadata — issuer
+    https://connect.liftlab.com, authorization_code + client_credentials +
+    refresh_token grants, response_type code. The protected endpoint
+    https://connect.liftlab.com/server/api/mcp returns 401 with a correct Bearer
+    challenge. Note: liftlab.com itself still returns 404 for this path; the
+    surface is on connect.liftlab.com.
+- id: rfc8414-as-metadata
+  conforms: true
+  evidence: >-
+    https://connect.liftlab.com/.well-known/oauth-authorization-server returns 200
+    application/json with a conformant RFC 8414 document.
+- id: rfc9728-protected-resource-metadata
+  conforms: true
+  evidence: >-
+    https://connect.liftlab.com/.well-known/oauth-protected-resource returns 200
+    naming resource https://connect.liftlab.com/server/api/mcp, and the 401 from
+    that resource carries
+    WWW-Authenticate: Bearer resource_metadata="https://connect.liftlab.com/.well-known/oauth-protected-resource"
+    — the full RFC 9728 discovery loop.
+- id: rfc7636-pkce
+  conforms: true
+  evidence: >-
+    code_challenge_methods_supported ["S256"] in the authorization-server metadata.
+- id: mcp
+  conforms: true
+  evidence: >-
+    An OAuth-protected Model Context Protocol endpoint is live at
+    https://connect.liftlab.com/server/api/mcp (401 + Bearer challenge to an
+    anonymous tools/list). Tool list is auth-gated and was not enumerated.
+    The deployment is a white-labeled TapClicks portal on LiftLab's hostname —
+    see mcp/liftlab-mcp.yml for the ownership finding.
 - id: oidc
   conforms: false
-  evidence: unknown — /.well-known/openid-configuration returns 404; no public auth surface.
+  evidence: >-
+    /.well-known/openid-configuration returns 404 on both liftlab.com and
+    connect.liftlab.com. The auth surface is plain OAuth 2.0, not OpenID Connect.
 - id: rfc9457-problem-details
   conforms: false
-  evidence: unknown — no public API or OpenAPI to inspect.
+  evidence: >-
+    unknown — no OpenAPI is published, and the only observable error body is the
+    MCP 401 envelope {"error":true,"data":[...],"warnings":[],"status":401}, which
+    is a vendor-shaped JSON envelope, not application/problem+json.
 - id: pci-dss
   conforms: false
   evidence: not claimed on the trust center or any public page.

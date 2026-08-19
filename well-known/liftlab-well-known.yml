@@ -1,46 +1,177 @@
-generated: '2026-07-19'
-method: searched
-source: https://liftlab.com/
-host: https://liftlab.com
+generated: '2026-08-13'
+method: probed
+source: >-
+  Live probes of liftlab.com, connect.liftlab.com and backend.liftlab.com.
+  Host list expanded on 2026-08-13 from certificate-transparency enumeration of
+  *.liftlab.com (api.certspotter.com), which surfaced hosts the 2026-07-19 round
+  could not guess.
 note: >-
-  LiftLab publishes no public API and exposes no /.well-known/ discovery
-  documents. Every probed path returned 404. A published /llms.txt IS present
-  and was captured verbatim at llms/liftlab-llms.txt. No WellKnown or
-  SecurityTxt pointer is wired into apis.yml because no document was found.
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
+  UPGRADE over the 2026-07-19 round, which probed only liftlab.com and recorded
+  "no /.well-known/ documents anywhere". That was true of the marketing host and
+  is still true. It was NOT true of the company: connect.liftlab.com serves two
+  real, parsing JSON discovery documents (RFC 8414 authorization-server metadata
+  and RFC 9728 protected-resource metadata) that advertise an OAuth-protected
+  MCP endpoint. Those are genuine 200s carrying real documents, so a WellKnown
+  pointer IS warranted this round. No security.txt is served on any host, so no
+  SecurityTxt pointer is emitted.
+
+hosts:
+
+- host: https://connect.liftlab.com
+  role: >-
+    LiftLab Connect portal — a white-labeled TapClicks deployment on LiftLab's
+    own hostname. Carries the only machine-readable discovery documents LiftLab
+    serves anywhere.
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: application/json
+    file: liftlab-oauth-authorization-server.json
+    real_document: true
+    summary: >-
+      RFC 8414 metadata. issuer https://connect.liftlab.com; authorize/token
+      endpoints under /server/api/mcp/; PKCE S256; grants authorization_code,
+      client_credentials, refresh_token; scopes_supported ["claudeai"].
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    content_type: application/json
+    file: liftlab-oauth-protected-resource.json
+    real_document: true
+    summary: >-
+      RFC 9728 metadata. resource https://connect.liftlab.com/server/api/mcp;
+      authorization_servers ["https://connect.liftlab.com"]; bearer via header.
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/mcp.json
+    status: 404
+
+- host: https://liftlab.com
+  role: Marketing website (WordPress front end, Cloudflare DNS).
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/mcp.json
+    status: 404
+  note: >-
+    Every path returns the site's HTML 404 template (57,597 bytes,
+    <!DOCTYPE html>), not a document — recorded as a miss, not a soft hit.
+
+- host: https://backend.liftlab.com
+  role: Headless WordPress backend for the marketing site (noindex, nofollow).
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+  note: >-
+    The whole /.well-known/ tree is blocked at the web server with a 403 (nginx
+    default body, 162 bytes). Nothing is served; nothing is asserted.
+
 related:
-- path: /llms.txt
+- path: https://liftlab.com/llms.txt
   status: 200
   file: ../llms/liftlab-llms.txt
-- path: /robots.txt
+  note: Captured verbatim in the 2026-07-19 round; still served, still current.
+- path: https://liftlab.com/robots.txt
   status: 200
   note: >-
-    Explicitly allows GPTBot, ClaudeBot and PerplexityBot, and allows /llms.txt.
-- path: /sitemap.xml
+    Allows all agents and names GPTBot, ClaudeBot and PerplexityBot explicitly.
+    Does not mention connect.liftlab.com.
+- path: https://liftlab.com/sitemap.xml
   status: 200
-  note: Index of 8 child sitemaps (page, platforms, solutions, blog, success-stories, news, whitepaper, webinar).
+  note: >-
+    Index of 8 child sitemaps (page, platforms, solutions, blog, success-stories,
+    news, whitepaper, webinar). No developer, API or docs section exists.
+- path: https://backend.liftlab.com/wp-json
+  status: 200
+  note: >-
+    Stock WordPress REST API root, 216 routes across oembed/1.0, yoast/v1, wp/v2,
+    wp-site-health/v1, wp-block-editor/v1 and wp-abilities/v1. It is auto-exposed
+    CMS infrastructure for the marketing site, carries no LiftLab custom post
+    types or product routes, and is NOT registered as a LiftLab API — doing so
+    would credit LiftLab with an API it never shipped.
+
 subdomains_probed:
-- host: docs.liftlab.com
-  status: no-dns
-- host: developer.liftlab.com
-  status: no-dns
+- host: connect.liftlab.com
+  status: 200
+  finding: MCP + OAuth discovery documents (see above)
+- host: backend.liftlab.com
+  status: 200
+  finding: WordPress REST API (CMS infrastructure)
+- host: v1.liftlab.com
+  status: 500
+  finding: Legacy WordPress instance returning "Database Error"
+- host: trustcenter.liftlab.com
+  status: dns-only
+  finding: CloudFront distribution; trust center is published at liftlab-analytics-inc.trust.site
+- host: staging.liftlab.com
+  status: dns-only
+  finding: CloudFront distribution (staging)
+- host: prod-miles-data.liftlab.com
+  status: timeout
+  finding: Resolves to 35.161.115.85; TCP 443 does not answer. Private infrastructure for "Miles AI".
+- host: prod-miles-ops.liftlab.com
+  status: timeout
+  finding: Resolves to 35.161.115.85; TCP 443 does not answer. Private infrastructure.
+- host: scheduler.liftlab.com
+  status: timeout
+  finding: Resolves to 52.43.0.90; TCP 443 does not answer. Private infrastructure.
 - host: api.liftlab.com
-  status: no-dns
+  status: nxdomain
+- host: docs.liftlab.com
+  status: nxdomain
+- host: developer.liftlab.com
+  status: nxdomain
 - host: app.liftlab.com
-  status: no-dns
-- host: support.liftlab.com
-  status: no-dns
+  status: nxdomain
+- host: portal.liftlab.com
+  status: nxdomain
 - host: status.liftlab.com
-  status: no-dns
+  status: nxdomain
+- host: mcp.liftlab.com
+  status: nxdomain
+
+alternate_domains:
+- domain: liftlab.io
+  status: 200
+  note: 301/302 chain terminating at https://liftlab.com/ — defensive registration.
+- domain: liftlab.ai
+  status: 200
+  note: Redirects to https://liftlab.com/.
+- domain: getliftlab.com
+  status: 200
+  note: Redirects to https://liftlab.com/.

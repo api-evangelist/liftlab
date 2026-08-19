@@ -1,0 +1,48 @@
+generated: '2026-08-13'
+method: searched
+source: https://liftlab.com/request-a-demo/
+note: >-
+  LiftLab publishes NO pricing of any kind. There is no pricing page, no plan
+  tiers, no published quotas and no self-serve signup — /pricing/ and /plans/
+  both return 404, and the only commercial call to action anywhere on the site
+  is "Request a Demo", which opens a lead form. The company sells enterprise
+  contracts to marketing, analytics and finance leaders through a sales
+  conversation, so price, included volume and overage are all negotiated and
+  none of them are public. This is an honest zero, recorded rather than omitted:
+  the absence of published pricing is itself the finding.
+
+plan_count: 0
+plans: []
+
+model: enterprise-sales-only
+self_serve: false
+free_tier: false
+trial:
+  offered: unknown
+  note: >-
+    No free trial is advertised on the public site. Note that the Connect portal
+    hostname resolves through liftlabtrial.tapclicks.com, which implies a trial
+    concept exists inside the vendor deployment, but LiftLab publishes no trial
+    terms, so nothing is asserted.
+
+acquisition:
+  path: Request a Demo lead form
+  url: https://liftlab.com/request-a-demo/
+  contact: https://liftlab.com/contact-us/
+
+x-evidence:
+- url: https://liftlab.com/pricing/
+  status: 404
+  fetched: '2026-08-13'
+- url: https://liftlab.com/plans/
+  status: 404
+  fetched: '2026-08-13'
+- url: https://liftlab.com/request-a-demo/
+  status: 200
+  fetched: '2026-08-13'
+- url: https://liftlab.com/sitemap.xml
+  status: 200
+  fetched: '2026-08-13'
+  note: >-
+    Sitemap index lists 8 child sitemaps (page, platforms, solutions, blog,
+    success-stories, news, whitepaper, webinar). No pricing section exists.

@@ -1,0 +1,54 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  Live response headers from https://connect.liftlab.com/server/api/mcp and
+  https://connect.liftlab.com/.well-known/* , plus a search of liftlab.com for
+  developer documentation.
+note: >-
+  LiftLab documents no rate limits, because LiftLab publishes no developer
+  documentation at all — /developers/, /api/ and /docs all 404 and no docs
+  subdomain resolves. The only reachable API surface is the OAuth-protected MCP
+  endpoint at connect.liftlab.com, and its anonymous 401 response carries no
+  rate-limit headers of any kind: no X-RateLimit-*, no RateLimit-*, no
+  Retry-After. Whether limits are enforced behind the OAuth wall cannot be
+  observed without a customer token. An honest zero with the headers actually
+  checked, rather than an omission.
+
+limit_count: 0
+limits: []
+
+headers_observed: []
+headers_checked:
+- X-RateLimit-Limit
+- X-RateLimit-Remaining
+- X-RateLimit-Reset
+- RateLimit-Limit
+- RateLimit-Remaining
+- RateLimit-Reset
+- RateLimit-Policy
+- Retry-After
+headers_result: >-
+  None present on any probed response. Response headers on the MCP 401 are
+  limited to server, cache-control, strict-transport-security,
+  content-security-policy, www-authenticate, x-robots-tag, x-content-type-options
+  and a session cookie.
+
+exhaustion_status_code: unknown
+documented: false
+documentation_url: null
+
+x-evidence:
+- url: https://connect.liftlab.com/server/api/mcp
+  status: 401
+  fetched: '2026-08-13'
+  note: POST tools/list; no rate-limit headers in the response.
+- url: https://connect.liftlab.com/.well-known/oauth-protected-resource
+  status: 200
+  fetched: '2026-08-13'
+  note: 200 response; no rate-limit headers.
+- url: https://liftlab.com/developers/
+  status: 404
+  fetched: '2026-08-13'
+- url: https://liftlab.com/api/
+  status: 404
+  fetched: '2026-08-13'

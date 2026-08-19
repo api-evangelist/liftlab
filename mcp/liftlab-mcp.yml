@@ -1,0 +1,114 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  https://connect.liftlab.com/.well-known/oauth-protected-resource +
+  https://connect.liftlab.com/.well-known/oauth-authorization-server +
+  live POST tools/list against https://connect.liftlab.com/server/api/mcp
+name: LiftLab Connect MCP Server
+description: >-
+  A live, OAuth-protected Model Context Protocol server served from LiftLab's
+  own hostname connect.liftlab.com. Discovered through certificate-transparency
+  enumeration of *.liftlab.com, not from any LiftLab documentation — LiftLab
+  publishes no developer portal, and this surface appears in neither
+  https://liftlab.com/llms.txt nor the sitemap.
+
+deployment:
+  mode: remote
+  endpoint: https://connect.liftlab.com/server/api/mcp
+  auth: oauth
+  verified: probed
+
+# ---------------------------------------------------------------------------
+# OWNERSHIP / PROVENANCE — read before trusting this artifact (pipeline STEP 0c)
+# ---------------------------------------------------------------------------
+ownership:
+  verdict: served-by-provider-on-vendor-platform
+  statement: >-
+    connect.liftlab.com is LiftLab's own hostname — the Let's Encrypt
+    certificate is issued to CN=connect.liftlab.com with that single SAN — and
+    every endpoint the discovery documents advertise is issued under
+    https://connect.liftlab.com, so the agent surface is reachable at and
+    attributed to LiftLab. The underlying platform is NOT LiftLab-built: the
+    hostname is a CNAME to liftlabtrial.tapclicks.com ->
+    tapcore-web-prod-simple.tapclicks.com, i.e. a white-labeled TapClicks
+    reporting portal, and the JSON error envelope and /client/dist/ +
+    /server/api/ path layout are TapClicks' application. Recorded as LiftLab's
+    surface because LiftLab serves it under its own domain and OAuth issuer,
+    with the vendor stated plainly rather than implied.
+  evidence:
+  - fact: DNS CNAME chain
+    value: connect.liftlab.com -> liftlabtrial.tapclicks.com -> tapcore-web-prod-simple.tapclicks.com
+  - fact: TLS certificate subject
+    value: CN=connect.liftlab.com (Let's Encrypt, SAN = connect.liftlab.com only)
+  - fact: OAuth issuer
+    value: https://connect.liftlab.com
+  vendor: TapClicks
+  built_by_provider: false
+
+status: live
+transport: streamable-http
+
+# ---------------------------------------------------------------------------
+# TOOLS — auth-gated, NOT enumerated. Nothing invented.
+# ---------------------------------------------------------------------------
+tools: []
+tools_note: >-
+  The live tool list is auth-gated and was NOT captured. An anonymous
+  POST {"jsonrpc":"2.0","id":1,"method":"tools/list"} returns HTTP 401
+  {"error":true,"data":["Please login to access the API"],"status":401} with a
+  correct RFC 9728 challenge header
+  WWW-Authenticate: Bearer resource_metadata="https://connect.liftlab.com/.well-known/oauth-protected-resource".
+  An initialize call returns the same 401. Enumerating the real tools and their
+  inputSchema requires an authenticated OAuth token from a LiftLab customer
+  account; LiftLab publishes no tool list anywhere public, so none is recorded
+  here. No candidate tools were derived because there is no OpenAPI to derive
+  them from.
+
+authorization:
+  protected_resource: https://connect.liftlab.com/.well-known/oauth-protected-resource
+  authorization_server: https://connect.liftlab.com/.well-known/oauth-authorization-server
+  authorization_endpoint: https://connect.liftlab.com/server/api/mcp/authorize
+  token_endpoint: https://connect.liftlab.com/server/api/mcp/token
+  revocation_endpoint: https://connect.liftlab.com/server/api/oauth/revoke
+  grant_types:
+  - authorization_code
+  - client_credentials
+  - refresh_token
+  code_challenge_methods:
+  - S256
+  bearer_methods:
+  - header
+  scopes:
+  - claudeai
+
+x-evidence:
+- url: https://connect.liftlab.com/.well-known/oauth-protected-resource
+  http_status: 200
+  content_type: application/json
+  fetched: '2026-08-13'
+- url: https://connect.liftlab.com/.well-known/oauth-authorization-server
+  http_status: 200
+  content_type: application/json
+  fetched: '2026-08-13'
+- url: https://connect.liftlab.com/server/api/mcp
+  http_status: 401
+  method: POST tools/list
+  note: RFC 9728 Bearer challenge returned; endpoint is live and OAuth-gated.
+  fetched: '2026-08-13'
+- url: https://connect.liftlab.com/.well-known/mcp.json
+  http_status: 404
+  fetched: '2026-08-13'
+
+notes:
+- >-
+  The single advertised OAuth scope is "claudeai", which indicates this MCP
+  server is deployed specifically as a Claude connector rather than as a general
+  developer API.
+- >-
+  This is a remote endpoint, not a stdio package: an MCP client POSTs directly to
+  https://connect.liftlab.com/server/api/mcp after an OAuth authorization-code +
+  PKCE flow. No npm/PyPI package ships for it (searched; none exists).
+- >-
+  LiftLab does not document this surface. It is undiscoverable from
+  liftlab.com — x-robots-tag on the responses is noindex, and the host is absent
+  from robots.txt, sitemap.xml and llms.txt.

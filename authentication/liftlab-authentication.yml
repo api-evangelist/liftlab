@@ -1,0 +1,89 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  https://connect.liftlab.com/.well-known/oauth-authorization-server +
+  https://connect.liftlab.com/.well-known/oauth-protected-resource +
+  live 401 challenge from https://connect.liftlab.com/server/api/mcp
+note: >-
+  Derived entirely from the two RFC 8414 / RFC 9728 discovery documents LiftLab
+  serves at connect.liftlab.com and from the live WWW-Authenticate challenge.
+  LiftLab publishes no developer documentation and no OpenAPI, so there is no
+  docs page to upgrade this from — every value below was read off a machine
+  document, not prose.
+
+schemes:
+- name: oauth2
+  type: oauth2
+  description: >-
+    OAuth 2.0 protecting the LiftLab Connect MCP endpoint
+    https://connect.liftlab.com/server/api/mcp. Advertised via RFC 8414
+    authorization-server metadata and RFC 9728 protected-resource metadata.
+  issuer: https://connect.liftlab.com
+  flows:
+  - flow: authorizationCode
+    authorization_url: https://connect.liftlab.com/server/api/mcp/authorize
+    token_url: https://connect.liftlab.com/server/api/mcp/token
+    refresh_supported: true
+    pkce: required-advertised
+    code_challenge_methods:
+    - S256
+    scopes:
+      claudeai: >-
+        The only scope the authorization server advertises. Named for the Claude
+        connector integration this MCP server is deployed for. LiftLab publishes
+        no scope reference page, so no description beyond the scope string itself
+        is available.
+  - flow: clientCredentials
+    token_url: https://connect.liftlab.com/server/api/mcp/token
+    scopes:
+      claudeai: >-
+        Same single advertised scope.
+  token_endpoint_auth_methods:
+  - none
+  - client_secret_post
+  response_types:
+  - code
+  bearer_methods:
+  - header
+  revocation_endpoint: https://connect.liftlab.com/server/api/oauth/revoke
+  dynamic_client_registration:
+    supported: false
+    note: >-
+      No registration_endpoint is present in the authorization-server metadata,
+      and /.well-known/openid-configuration returns 404, so clients cannot
+      self-register — a client must be provisioned by LiftLab/TapClicks.
+
+surfaces:
+- surface: MCP
+  url: https://connect.liftlab.com/server/api/mcp
+  auth: oauth2
+  anonymous_status: 401
+  challenge: >-
+    WWW-Authenticate: Bearer resource_metadata="https://connect.liftlab.com/.well-known/oauth-protected-resource"
+  error_envelope: '{"error":true,"data":["Please login to access the API"],"warnings":[],"status":401}'
+
+not_found:
+- path: /.well-known/openid-configuration
+  host: connect.liftlab.com
+  status: 404
+  note: No OpenID Connect discovery; this is plain OAuth 2.0, not OIDC.
+- path: /.well-known/jwks.json
+  host: connect.liftlab.com
+  status: 404
+
+x-evidence:
+- url: https://connect.liftlab.com/.well-known/oauth-authorization-server
+  http_status: 200
+  fetched: '2026-08-13'
+- url: https://connect.liftlab.com/.well-known/oauth-protected-resource
+  http_status: 200
+  fetched: '2026-08-13'
+- url: https://connect.liftlab.com/server/api/mcp
+  http_status: 401
+  fetched: '2026-08-13'
+
+ownership_note: >-
+  connect.liftlab.com is LiftLab's own hostname (Let's Encrypt cert
+  CN=connect.liftlab.com) running a white-labeled TapClicks portal (CNAME to
+  liftlabtrial.tapclicks.com); the OAuth issuer is https://connect.liftlab.com.
+  See mcp/liftlab-mcp.yml for the full ownership finding.
