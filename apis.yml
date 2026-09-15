@@ -1,27 +1,20 @@
 aid: liftlab
 name: LiftLab
-description: >-
-  LiftLab (LiftLab Analytics, Inc.) is a marketing measurement and capital
-  allocation platform for enterprise marketing, analytics, and finance leaders.
-  Its Two-Stage Agile Marketing Mix Model (AMM) separates ad marketplace auction
-  dynamics — CPM/CPC volatility and competitive pressure — from true consumer
-  demand response, producing channel response curves and marginal ROI (mROAS)
-  that are not contaminated by marketplace noise. A geo-based Incrementality
-  Testing Suite feeds causal results back into the model through the Trust
-  Engine as permanent calibration inputs, PlatformSense applies live ad platform
-  data to those stable curves for daily channel intelligence, the Scenario
-  Planner turns model output into constraint-aware, finance-ready budget plans,
-  and Miles AI answers natural-language questions grounded in the model. LiftLab
-  serves D2C/ecommerce, CPG, and omnichannel retail brands including Pandora,
-  Cinemark, Quicken, SKIMS, and Thrive Market. Headquartered in Oakland, CA;
-  SOC 2 Type II and ISO 27001:2013 certified, GDPR and CCPA compliant. LiftLab
-  publishes no developer portal, no API documentation and no OpenAPI, but it
-  does operate one undocumented machine surface: an OAuth-protected Model
-  Context Protocol endpoint at https://connect.liftlab.com/server/api/mcp,
-  advertised through RFC 8414 and RFC 9728 discovery documents on its own
-  hostname and scoped for a Claude connector. That host is a white-labeled
-  TapClicks deployment, so the agent surface is served by LiftLab but supplied
-  by a vendor.
+description: 'LiftLab (LiftLab Analytics, Inc.) is a marketing measurement and capital allocation platform
+  for enterprise marketing, analytics, and finance leaders. Its Two-Stage Agile Marketing Mix Model (AMM)
+  separates ad marketplace auction dynamics — CPM/CPC volatility and competitive pressure — from true
+  consumer demand response, producing channel response curves and marginal ROI (mROAS) that are not contaminated
+  by marketplace noise. A geo-based Incrementality Testing Suite feeds causal results back into the model
+  through the Trust Engine as permanent calibration inputs, PlatformSense applies live ad platform data
+  to those stable curves for daily channel intelligence, the Scenario Planner turns model output into
+  constraint-aware, finance-ready budget plans, and Miles AI answers natural-language questions grounded
+  in the model. LiftLab serves D2C/ecommerce, CPG, and omnichannel retail brands including Pandora, Cinemark,
+  Quicken, SKIMS, and Thrive Market. Headquartered in Oakland, CA; SOC 2 Type II and ISO 27001:2013 certified,
+  GDPR and CCPA compliant. LiftLab publishes no developer portal, no API documentation and no OpenAPI,
+  but it does operate one undocumented machine surface: an OAuth-protected Model Context Protocol endpoint
+  at https://connect.liftlab.com/server/api/mcp, advertised through RFC 8414 and RFC 9728 discovery documents
+  on its own hostname and scoped for a Claude connector. That host is a white-labeled TapClicks deployment,
+  so the agent surface is served by LiftLab but supplied by a vendor.'
 url: https://raw.githubusercontent.com/api-evangelist/liftlab/refs/heads/main/apis.yml
 deliveryModel:
   model: saas
@@ -87,19 +80,16 @@ tags_raw:
 - Data Science
 - SaaS
 apis:
-- aid: liftlab-connect-mcp
+- aid: liftlab:liftlab-connect-mcp
   name: LiftLab Connect MCP Server
-  description: >-
-    An OAuth-protected Model Context Protocol endpoint served from LiftLab's own
-    hostname connect.liftlab.com, discovered by certificate-transparency
-    enumeration rather than from documentation. An anonymous tools/list returns
-    401 with a correct RFC 9728 Bearer challenge, so the endpoint is live and the
-    tool list is auth-gated; no tools are recorded because none could be read
-    without a customer token, and none were invented. The single advertised OAuth
-    scope is "claudeai". The host is a white-labeled TapClicks portal (CNAME to
-    liftlabtrial.tapclicks.com), so LiftLab serves this surface under its own
-    domain and OAuth issuer while the underlying platform is vendor-supplied.
-    LiftLab publishes no documentation for it anywhere.
+  description: An OAuth-protected Model Context Protocol endpoint served from LiftLab's own hostname connect.liftlab.com,
+    discovered by certificate-transparency enumeration rather than from documentation. An anonymous tools/list
+    returns 401 with a correct RFC 9728 Bearer challenge, so the endpoint is live and the tool list is
+    auth-gated; no tools are recorded because none could be read without a customer token, and none were
+    invented. The single advertised OAuth scope is "claudeai". The host is a white-labeled TapClicks portal
+    (CNAME to liftlabtrial.tapclicks.com), so LiftLab serves this surface under its own domain and OAuth
+    issuer while the underlying platform is vendor-supplied. LiftLab publishes no documentation for it
+    anywhere.
   humanURL: https://connect.liftlab.com/
   baseURL: https://connect.liftlab.com/server/api/mcp
   tags:
@@ -167,8 +157,6 @@ x-enrichment:
   status: enriched
   artifacts_added: 7
   pass: local-v1
-  note: >-
-    Certificate-transparency enumeration of *.liftlab.com surfaced
-    connect.liftlab.com, overturning the prior round's "no API surface" finding:
-    a live OAuth-protected MCP endpoint with RFC 8414 + RFC 9728 discovery
-    documents. Tool list is auth-gated and was not enumerated.
+  note: 'Certificate-transparency enumeration of *.liftlab.com surfaced connect.liftlab.com, overturning
+    the prior round''s "no API surface" finding: a live OAuth-protected MCP endpoint with RFC 8414 + RFC
+    9728 discovery documents. Tool list is auth-gated and was not enumerated.'
