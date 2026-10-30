@@ -64,15 +64,119 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-LiftLab (LiftLab Analytics, Inc.) is a marketing measurement and capital allocation platform for enterprise marketing, analytics, and finance leaders. Its Two-Stage Agile Marketing Mix Model (AMM) separates ad marketplace auction dynamics from true consumer demand response; a geo-based Incrementality Testing Suite calibrates the model through the Trust Engine; PlatformSense delivers daily channel intelligence; the Scenario Planner produces constraint-aware, finance-ready budget plans; and Miles AI answers natural-language questions grounded in the model.
+LiftLab (LiftLab Analytics, Inc.) is a marketing measurement and capital allocation platform for enterprise marketing, analytics, and finance leaders. Its Two-Stage Agile Marketing Mix Model (AMM) separates ad marketplace auction dynamics — CPM/CPC volatility and competitive pressure — from true consumer demand response, producing channel response curves and marginal ROI (mROAS) that are not contaminated by marketplace noise. A geo-based Incrementality Testing Suite feeds causal results back into the model through the Trust Engine as permanent calibration inputs, PlatformSense applies live ad platform data to those stable curves for daily channel intelligence, the Scenario Planner turns model output into constraint-aware, finance-ready budget plans, and Miles AI answers natural-language questions grounded in the model. LiftLab serves D2C/ecommerce, CPG, and omnichannel retail brands including Pandora, Cinemark, Quicken, SKIMS, and Thrive Market. Headquartered in Oakland, CA; SOC 2 Type II and ISO 27001:2013 certified, GDPR and CCPA compliant. LiftLab publishes no developer portal, no API documentation and no OpenAPI, but it does operate one undocumented machine surface: an OAuth-protected Model Context Protocol endpoint at https://connect.liftlab.com/server/api/mcp, advertised through RFC 8414 and RFC 9728 discovery documents on its own hostname and scoped for a Claude connector. That host is a white-labeled TapClicks deployment, so the agent surface is served by LiftLab but supplied by a vendor.
 
-Headquartered in Oakland, CA. SOC 2 Type II and ISO 27001:2013 certified, GDPR and CCPA compliant.
+**Areas:** Company · Enterprise · Marketing · Marketing Measurement · Marketing Mix Modeling · Incrementality · Analytics · MarTech · Attribution · Budget Optimization · Data Science · Software-as-a-Service
 
-**LiftLab publishes no public developer API, API documentation, SDKs, or `/.well-known/` discovery surface** as of the July 2026 enrichment pass. It does publish a structured `/llms.txt` and a hosted trust center.
+## LiftLab on APIs.io
 
-- Website: https://liftlab.com/
-- Knowledge Hub: https://liftlab.com/resources/
-- Blog: https://liftlab.com/blog/
-- Trust Center: https://liftlab-analytics-inc.trust.site/
+Everything profiled for LiftLab is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/liftlab/](https://apis.io/providers/liftlab/)** — or go straight to one of the APIs or properties below.
 
-Backed by: cowboy-ventures
+### APIs (1)
+
+- [LiftLab Connect MCP Server](https://apis.io/apis/liftlab/liftlab-connect-mcp/) — An OAuth-protected Model Context Protocol endpoint served from LiftLab's own hostname connect.liftlab.com, discovered by certificate-transparency…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [LiftLab Connect MCP Server](https://apis.io/servers/liftlab/liftlab-connect-mcp-server/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Liftlab Authentication](https://apis.io/security/liftlab/liftlab-authentication/)
+- [Liftlab Domain Security](https://apis.io/security/liftlab/liftlab-domain-security/)
+- [Liftlab Trust Center](https://apis.io/security/liftlab/liftlab-trust-center/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Liftlab Scopes](https://apis.io/scopes/liftlab/liftlab-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Liftlab Plans Pricing](https://apis.io/plans/liftlab/liftlab-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Liftlab Rate Limits](https://apis.io/rate-limits/liftlab/liftlab-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://liftlab.com/)
+- [Documentation](https://liftlab.com/resources/)
+- [Getting started](https://liftlab.com/platform/unified-marketing-measurement/)
+- [Sign up](https://liftlab.com/request-a-demo/)
+- [Support](https://liftlab.com/contact-us/)
+- [Blog](https://liftlab.com/blog/)
+- [Compliance](https://liftlab-analytics-inc.trust.site/)
+- [Terms of service](https://liftlab.com/terms-of-service/)
+- [Privacy policy](https://liftlab.com/privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 31.4** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 50.0 |
+
+**Agent readiness 25.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 39.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/liftlab/](https://apis.io/providers/liftlab/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for LiftLab: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/liftlab/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
